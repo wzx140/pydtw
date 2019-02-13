@@ -72,8 +72,18 @@ def _trackeback(D):
         p.insert(0, i)
         q.insert(0, j)
 
-    p.insert(0, 0)
-    q.insert(0, 0)
+    # p.insert(0, 0)
+    # q.insert(0, 0)
+	if p[0] == 0:
+        while j > 0:
+            j -= 1
+            p.insert(0, i)
+            q.insert(0, j)
+    elif q[0] == 0:
+        while i > 0:
+            i -= 1
+            p.insert(0, i)
+            q.insert(0, j)
     return (np.array(p), np.array(q))
 
 
